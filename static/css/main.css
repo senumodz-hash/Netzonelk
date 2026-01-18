@@ -1,0 +1,154 @@
+:root {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #111111;
+    --bg-card: #121212;
+    --text-primary: #ffffff;
+    --text-secondary: #bbbbbb;
+    --accent: #21F2FF;
+    --accent-glow: rgba(33, 242, 255, 0.5);
+    --border: #222222;
+    --gradient-1: linear-gradient(135deg, #0a0a0a 0%, #111111 100%);
+    --gradient-2: linear-gradient(90deg, #21F2FF, #00FFFF);
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a:hover {
+    text-shadow: 0 0 8px var(--accent-glow);
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--text-primary);
+}
+
+button, .btn {
+    background: var(--accent);
+    color: var(--bg-primary);
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px var(--accent-glow);
+}
+
+.card, .contact-card, .feature-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.4s;
+}
+
+.card:hover, .contact-card:hover, .feature-box:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.hero-icon-badge, .contact-icon-wrapper, .info-icon {
+    border: 2px solid var(--accent);
+    background: rgba(33, 242, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px var(--accent-glow);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.error-code {
+    font-size: 7rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-shadow: 0 0 20px var(--accent-glow);
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0%,100% { text-shadow: 0 0 20px var(--accent-glow); }
+    50% { text-shadow: 0 0 40px var(--accent-glow); }
+}
+
+.contact-hero {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: var(--gradient-1);
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 1rem;
+}
+
+.contact-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-hero p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: -4rem auto 2rem;
+    padding: 0 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.contact-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0.9rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.contact-link.whatsapp-link { background: #25D366; }
+.contact-link.discord-link { background: #5865F2; }
+
+.contact-link:hover { transform: translateY(-2px); box-shadow: 0 0 20px var(--accent-glow); }
+
+/* responsive */
+@media(max-width:768px){
+    .contact-hero h1 { font-size:2rem; }
+    .contact-hero p { font-size:0.95rem; }
+}

@@ -7,11 +7,9 @@ from functools import wraps
 app = Flask(__name__)
 CORS(app)
 
-# API keys
 PUBLIC_KEY = "NZ_PUB_7f9a2e8c4b6d1a5f3e0c9b7a4d2f8e1c"
 SECRET_KEY_FILE = "static/data/secret_key.txt"
 
-# Helpers
 def load_json(filename):
     filepath = os.path.join('static/data', filename)
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -33,12 +31,13 @@ def require_api_keys(f):
 
         if not public_key or not secret_key:
             return jsonify({'error': 'Missing API keys', 'message': 'Both keys required'}), 401
+
         if public_key != PUBLIC_KEY or secret_key != stored_secret:
             return jsonify({'error': 'Invalid API keys', 'message': 'Keys invalid'}), 403
+
         return f(*args, **kwargs)
     return decorated_function
 
-# Routes
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -47,14 +46,11 @@ def index():
 def contact():
     return render_template('contact.html')
 
-@app.route('/how-to-use-vpn')
-def how_to_use_vpn():
-    return render_template('how_to_use_vpn.html')
-
-# API Endpoints
 @app.route('/api/health')
 def api_health():
-    return jsonify({'status': 'healthy', 'service': 'Netzone API', 'version': '1.0.0'}), 200
+    return jsonify({
+        'status': 'healthy', 'service': 'Netzone API', 'version': '1.0.0'
+    }), 200
 
 @app.route('/api/v2rays')
 @require_api_keys
@@ -63,7 +59,7 @@ def api_v2rays():
         data = load_json('free_v2rays.json')
         return jsonify({'success': True, 'count': len(data.get('vpn_configs', [])), 'data': data}), 200
     except Exception as e:
-        return jsonify({'error': 'Internal server error', 'message': str(e)}), 500
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/apps')
 def api_apps():
@@ -71,9 +67,8 @@ def api_apps():
         data = load_json('apps.json')
         return jsonify({'success': True, 'count': len(data.get('apps', [])), 'data': data}), 200
     except Exception as e:
-        return jsonify({'error': 'Internal server error', 'message': str(e)}), 500
+        return jsonify({'error': str(e)}), 500
 
-# Redirects
 @app.route('/whatsapp')
 def whatsapp():
     return redirect("https://chat.whatsapp.com/Hre9DcY71UvC32oMVwwUrE", code=302)
@@ -82,7 +77,6 @@ def whatsapp():
 def discord():
     return redirect("https://discord.gg/DhPZ8uMv4v", code=302)
 
-# Error Handlers
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -91,6 +85,5 @@ def page_not_found(e):
 def internal_error(e):
     return render_template('404.html'), 500
 
-# Run
 if __name__ == '__main__':
     app.run(debug=True)

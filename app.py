@@ -3,7 +3,6 @@ from flask_cors import CORS
 from functools import wraps
 import json
 import os
-from pymongo import MongoClient
 
 app = Flask(__name__)
 CORS(app)
@@ -13,16 +12,6 @@ CORS(app)
 # =========================
 PUBLIC_KEY = "NZ_PUB_7f9a2e8c4b6d1a5f3e0c9b7a4d2f8e1c"
 SECRET_KEY_FILE = "static/data/secret_key.txt"
-
-# MongoDB setup
-MONGO_USER = "senumodz_db_user"
-MONGO_PASS = "fjjfx6apE5wVNI7I"   # <- your MongoDB password
-MONGO_DB = "NetzoneDB"
-MONGO_HOST = "localhost"
-MONGO_PORT = 27017
-
-client = MongoClient(f"mongodb://{MONGO_USER}:{MONGO_PASS}@{MONGO_HOST}:{MONGO_PORT}/{MONGO_DB}?authSource=admin")
-db = client[MONGO_DB]
 
 # =========================
 # UTILITY FUNCTIONS
@@ -78,7 +67,7 @@ def api_health():
 @require_api_keys
 def api_v2rays():
     try:
-        data = load_json('free_v2rays.json')
+        data = load_json('static/data/free_v2rays.json')
         return jsonify({'success': True, 'count': len(data.get('vpn_configs', [])), 'data': data}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -86,7 +75,7 @@ def api_v2rays():
 @app.route('/api/apps')
 def api_apps():
     try:
-        data = load_json('apps.json')
+        data = load_json('static/data/apps.json')
         return jsonify({'success': True, 'count': len(data.get('apps', [])), 'data': data}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500

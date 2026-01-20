@@ -1,15 +1,32 @@
 from flask import Flask, render_template, jsonify, request, redirect
 from flask_cors import CORS
+from functools import wraps
 import json
 import os
-from functools import wraps
+from pymongo import MongoClient
 
 app = Flask(__name__)
 CORS(app)
 
+# =========================
+# CONFIGURATION
+# =========================
 PUBLIC_KEY = "NZ_PUB_7f9a2e8c4b6d1a5f3e0c9b7a4d2f8e1c"
 SECRET_KEY_FILE = "static/data/secret_key.txt"
 
+# MongoDB setup
+MONGO_USER = "senumodz_db_user"
+MONGO_PASS = "YOUR_PASSWORD"   # <- replace with your password
+MONGO_DB = "NetzoneDB"
+MONGO_HOST = "localhost"
+MONGO_PORT = 27017
+
+client = MongoClient(f"mongodb://{MONGO_USER}:{MONGO_PASS}@{MONGO_HOST}:{MONGO_PORT}/{MONGO_DB}?authSource=admin")
+db = client[MONGO_DB]
+
+# =========================
+# UTILITY FUNCTIONS
+# =========================
 def load_json(filename):
     filepath = os.path.join('static/data', filename)
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -38,6 +55,9 @@ def require_api_keys(f):
         return f(*args, **kwargs)
     return decorated_function
 
+# =========================
+# ROUTES
+# =========================
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -49,7 +69,9 @@ def contact():
 @app.route('/api/health')
 def api_health():
     return jsonify({
-        'status': 'healthy', 'service': 'Netzone API', 'version': '1.0.0'
+        'status': 'healthy',
+        'service': 'Netzone API',
+        'version': '1.0.0'
     }), 200
 
 @app.route('/api/v2rays')
@@ -77,6 +99,9 @@ def whatsapp():
 def discord():
     return redirect("https://discord.gg/DhPZ8uMv4v", code=302)
 
+# =========================
+# ERROR HANDLING
+# =========================
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -85,5 +110,8 @@ def page_not_found(e):
 def internal_error(e):
     return render_template('404.html'), 500
 
+# =========================
+# MAIN
+# =========================
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

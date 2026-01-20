@@ -1,21 +1,15 @@
 from flask import Flask, render_template, jsonify, request, redirect
 from flask_cors import CORS
-from functools import wraps
 import json
 import os
+from functools import wraps
 
 app = Flask(__name__)
 CORS(app)
 
-# =========================
-# CONFIGURATION
-# =========================
 PUBLIC_KEY = "NZ_PUB_7f9a2e8c4b6d1a5f3e0c9b7a4d2f8e1c"
 SECRET_KEY_FILE = "static/data/secret_key.txt"
 
-# =========================
-# UTILITY FUNCTIONS
-# =========================
 def load_json(filename):
     filepath = os.path.join('static/data', filename)
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -44,9 +38,6 @@ def require_api_keys(f):
         return f(*args, **kwargs)
     return decorated_function
 
-# =========================
-# ROUTES
-# =========================
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -58,16 +49,14 @@ def contact():
 @app.route('/api/health')
 def api_health():
     return jsonify({
-        'status': 'healthy',
-        'service': 'Netzone API',
-        'version': '1.0.0'
+        'status': 'healthy', 'service': 'Netzone API', 'version': '1.0.0'
     }), 200
 
 @app.route('/api/v2rays')
 @require_api_keys
 def api_v2rays():
     try:
-        data = load_json('static/data/free_v2rays.json')
+        data = load_json('free_v2rays.json')
         return jsonify({'success': True, 'count': len(data.get('vpn_configs', [])), 'data': data}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -75,7 +64,7 @@ def api_v2rays():
 @app.route('/api/apps')
 def api_apps():
     try:
-        data = load_json('static/data/apps.json')
+        data = load_json('apps.json')
         return jsonify({'success': True, 'count': len(data.get('apps', [])), 'data': data}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
@@ -88,9 +77,6 @@ def whatsapp():
 def discord():
     return redirect("https://discord.gg/DhPZ8uMv4v", code=302)
 
-# =========================
-# ERROR HANDLING
-# =========================
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -99,8 +85,5 @@ def page_not_found(e):
 def internal_error(e):
     return render_template('404.html'), 500
 
-# =========================
-# MAIN
-# =========================
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

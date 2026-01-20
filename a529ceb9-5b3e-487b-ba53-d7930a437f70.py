@@ -16,7 +16,7 @@ SECRET_KEY_FILE = "static/data/secret_key.txt"
 
 # MongoDB setup
 MONGO_USER = "senumodz_db_user"
-MONGO_PASS = "YOUR_PASSWORD"   # <- replace with your password
+MONGO_PASS = "fjjfx6apE5wVNI7I"
 MONGO_DB = "NetzoneDB"
 MONGO_HOST = "localhost"
 MONGO_PORT = 27017

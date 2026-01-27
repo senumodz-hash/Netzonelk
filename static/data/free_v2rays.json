@@ -2,47 +2,47 @@
   "vpn_configs": [
     {
       "name": "Dialog Zoom",
-      "v2ray": "nm-vless://Pr/jCdH3qj3XXeymFvwXvzRKoyljum4GN8zOsFYUdk4QE7gCp4JnupCScXhm8YB9fhxjjsoBjcm0H5UvqT3AUg72/nAmB94w7Ow3pl9MXJPXZiaUo7e13AL5/BL2tRHH4W3LN7KPLQS/XlLsqUc6ZacVEVQQTfKCIC/bmCW8YOCIPOB4bRS2g8xnFYT0K5Jezay3zjStp0cAdTuDp06cF2xr3f3KDHzQCOGQcSOR7b8=",
+      "v2ray": "vless://6a06d40d-c804-45ad-90d1-fbe09d923872@linode-paid-v2ray.sithux.shop:443?type=tcp&encryption=none&security=tls&fp=chrome&alpn=h2%2Chttp%2F1.1&sni=aka.ms#D%20ZOOM%20sithux.shop-free",
       "icon": "images/dialog.jpg"
     },
     {
       "name": "Dialog 348",
-      "v2ray": "nm-vless://XmGfF1vKBM1dHJ+KpcYqNSkuKXGflir94kTa1wL87I9dCpBHaxTY8YGWJIPX5ahCfhxjjsoBjcm0H5UvqT3AUg72/nAmB94w7Ow3pl9MXJPXZiaUo7e13AL5/BL2tRHH4W3LN7KPLQS/XlLsqUc6ZacVEVQQTfKCIC/bmCW8YOCIPOB4bRS2g8xnFYT0K5JeYyPz23ICgs4sppUjbO/eSTHKMAgXpN/0CvGT6Z++ZUQ=",
+      "v2ray": "no v2ray",
       "icon": "images/dialog.jpg"
     },
      {
       "name": "Dialog Tiktok",
-      "v2ray": "nm-vless://TNfdE1fgHuv5qIeXmVVtpN0QxJIht/Dz/JKUNWgMlvvBvSTWPH0ByKuRX4e/lj3ZfhxjjsoBjcm0H5UvqT3AUg72/nAmB94w7Ow3pl9MXJPXZiaUo7e13AL5/BL2tRHH4W3LN7KPLQS/XlLsqUc6ZacVEVQQTfKCIC/bmCW8YOCIPOB4bRS2g8xnFYT0K5Je+T7+ug0Ve1jnnWCsyJrdwMXPImO6SdIgPkXuz47R/KPPInBSel9Oa8CnwLk7xY7S",
+      "v2ray": "",
       "icon": "images/dialog.jpg"
     },
     {
       "name": "SLT Zoom",
-      "v2ray": "nm-vless://5oU4SImS6WCcdg25/tS3vzLXy7jch8TkaBOU/7JKkqcu6Qnrj6LVTsQ73QNimnURfhxjjsoBjcm0H5UvqT3AUg72/nAmB94w7Ow3pl9MXJPXZiaUo7e13AL5/BL2tRHH4W3LN7KPLQS/XlLsqUc6ZacVEVQQTfKCIC/bmCW8YOCIPOB4bRS2g8xnFYT0K5JeoIHZRioX7Wzl+xY/gDVxACDEyDJFkw8j8OKMnXD4n1E=",
+      "v2ray": "",
       "icon": "images/slt.png"
     },
     {
       "name": "FIBER Zoom",
-      "v2ray": "nm-vless://6MPoaq83nyhYh5U4VUOPqVJuxpiJN91lmmVjfr9zv9LDR2UZghJoOD50l/b+JEH3poRhDZTYRN6rz6SH/njdalzbUKEwTQ8PfSB6C1H9GE5S9Un+aoHEzUq5hz0AUHqbQWLQQphgHagPAQWg5Win9Uo94B4HhSKHQvOJ5Z74XiqPz3Y6CbEwAl0xfEa/4B7KRQf3BfZJGgBspXDUBhI1aQ==",
+      "v2ray": "",
       "icon": "images/slt.png"
     },
     {
       "name": "SLT NETFLIX",
-      "v2ray": "nm-vless://esMJSObEw6NTGYSWd2m4Nnj8sn962vFl0Pgk7TcwSjaFu/Vf0whINvmHx4Hn0M3QfhxjjsoBjcm0H5UvqT3AUg72/nAmB94w7Ow3pl9MXJPXZiaUo7e13AL5/BL2tRHH4W3LN7KPLQS/XlLsqUc6ZacVEVQQTfKCIC/bmCW8YOCIPOB4bRS2g8xnFYT0K5Jeb/ZCVSSQ+0AdIL37CTmzGm/CTIglZpoRfSB6kyWW25/JBN7cWOnLuANv3OmCKN/K",
+      "v2ray": "",
       "icon": "images/slt.png"
     },
     {
       "name": "Mobitel Zoom",
-      "v2ray": "nm-vless://d3vYSiuGmwJLsTJsyyf5UYM3lUY4fxZqv7WE2U6gb0Jof57N7MJOnYmldvv5UBmt6/h0tjTl+IGyt0o+uY56VUY3tXKK0oGK0oUir02cE0VzOJTS+xNVzmG1cFnKXpMQTmO2hHN7BmKJNrwksjPcrBIj+nZ/BlyMV7UUvkzeJ9JAhUhtXgwS7nG091buWVpfrmyjyRzIHm1dx7jJZp5p/iRgVlcwgZGl8jrqnyB0jTbAnA3M/4KJxPvu2bz+FcfhukpSYMlqGEqOQSmTdqtKtw==",
+      "v2ray": "vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJNIFpPT00gc2l0aHV4LnNob3AtZnJlZTIiLAogICJhZGQiOiAibGlub2RlLXBhaWQtdjJyYXkuc2l0aHV4LnNob3AiLAogICJwb3J0IjogODQ0MywKICAiaWQiOiAiZGEyNjBmZTctZmQ4MS00YWZjLWE1NDItNDhkM2JlMzlkNTM0IiwKICAic2N5IjogImF1dG8iLAogICJuZXQiOiAid3MiLAogICJ0bHMiOiAidGxzIiwKICAicGF0aCI6ICIvc2l0aHVYIiwKICAiaG9zdCI6ICJsaW5vZGUtcGFpZC12MnJheS5zaXRodXguc2hvcCIsCiAgImZwIjogImNocm9tZSIsCiAgImFscG4iOiAiaDIsaHR0cC8xLjEiCn0=",
       "icon": "images/mobitel.jpg"
     },
     {
       "name": "Hutch Zoom",
-      "v2ray": "nm-vless://JQ0bz91Rcd2Wy8BKvm+3ZBfFfmtrR7MA5KHGlHiJ9qk6vBOqSMxUjx1X275VzLOknYtiiD4nAiqC/vmg8DG6JS0HyMw+jlAnEa9EAk6rvSLT9X5XBXpN2JEhnAcMWs2mx/LfLYLenLqbTKrwXZ06nrZEB0pxBmzM7xN3DA1sWtGEauvnHoVEjFn8g+vYRb6iPtns9htYbUoO8nDLXcR9/I6qIFHibOOM9U94L2gsje4kc2ONWjWZM6dYjk4fiCTS",
+      "v2ray": "vless://3e55f8ab-605e-469f-b846-ffa3d1942b3b@linode-paid-v2ray.sithux.shop:8080?type=ws&encryption=none&path=%2Fsithu_X&host=linode-paid-v2ray.sithux.shop&security=none#A%20ZOOM%20sithux.shop-free3",
       "icon": "images/hutch.png"
     },
     {
       "name": "Hutch 169",
-      "v2ray": "nm-vless://MDiD+z6Y45Nlks+nRRSNoKZwkjiJl6Q8Y2suQgdZxfX2/CKzEfl8BRpKWh2jUxPRfhxjjsoBjcm0H5UvqT3AUg72/nAmB94w7Ow3pl9MXJPXZiaUo7e13AL5/BL2tRHH4W3LN7KPLQS/XlLsqUc6ZacVEVQQTfKCIC/bmCW8YOCIPOB4bRS2g8xnFYT0K5JeRuT2LYwahoAx674v2jqJYGp5/7SWWR2H38oD4qn1XOA=",
+      "v2ray": "",
       "icon": "images/hutch.png"
     },
     {
@@ -52,12 +52,7 @@
     },
      {
       "name": "Airtel 148/498",
-      "v2ray": "nm-vless://d87w/KeMIA4HJnObKkTBJgs2HIHO6OdorLI0X2cOZcBR8aKqfxCaCNC56kPgs7v7fhxjjsoBjcm0H5UvqT3AUg72/nAmB94w7Ow3pl9MXJPXZiaUo7e13AL5/BL2tRHH4W3LN7KPLQS/XlLsqUc6ZacVEVQQTfKCIC/bmCW8YOCIPOB4bRS2g8xnFYT0K5JeL0T6dbfdX8hZQ8AKbw2Sx0ZDScWo+aqs+V/NdYYgP3fQXVLcI+Twvnf4Tq3vI6iM#",
-      "icon": "images/airtel.png"
-    },
-    {
-      "name": "Airtel youtube",
-      "v2ray": "nm-vless://cn0F9s0t9BXELAW1aiJ8aVFB/7k6DSDgv3tXjDU4gtEXI8DpQkwWfyJW/IE6lOtGfhxjjsoBjcm0H5UvqT3AUg72/nAmB94w7Ow3pl9MXJPXZiaUo7e13AL5/BL2tRHH4W3LN7KPLQS/XlLsqUc6ZacVEVQQTfKCIC/bmCW8YOCIPOB4bRS2g8xnFYT0K5Jeaa3HNR6hbqGwgTlecXOkVC9cZYr1FBukgGPPzndqAzg=",
+      "v2ray": "",
       "icon": "images/airtel.png"
     },
      {
@@ -72,10 +67,11 @@
     },
     {
       "name": "Airtel Zoom",
-      "v2ray": "nm-vless://P8TaJPxHMZ2/FZvLk5/CqDeN+DNebZf+g+aYZBRgnXa/fMQkCvKsYH+6r7nkc7nMnYtiiD4nAiqC/vmg8DG6JS0HyMw+jlAnEa9EAk6rvSLT9X5XBXpN2JEhnAcMWs2mx/LfLYLenLqbTKrwXZ06nrZEB0pxBmzM7xN3DA1sWtFD8KPURV7IOpN/1c2aCC+gBHVSeDR02Vrt4AtN3nu658jgZB6uS4VXd/DwB0Myr39WbmAHeA+AvGGvYEBAJrnL",
+      "v2ray": "vless://3e55f8ab-605e-469f-b846-ffa3d1942b3b@linode-paid-v2ray.sithux.shop:8080?type=ws&encryption=none&path=%2Fsithu_X&host=linode-paid-v2ray.sithux.shop&security=none#A%20ZOOM%20sithux.shop-free3",
       "icon": "images/airtel.png"
     }
   ]
 }
+
 
 
